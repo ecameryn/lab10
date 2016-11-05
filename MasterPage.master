@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Styles.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Wrapper">
+        <header><a href="/">Header goes here</a></header>
+        <nav>Menu goes here</nav>
+        <section id="MainContent">
+            <asp:ContentPlaceHolder id="cpMainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+        <aside id="Sidebar">Sidebar goes here</aside>
+        <footer>Footer goes here</footer>
+    </div>
+    </form>
+
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
